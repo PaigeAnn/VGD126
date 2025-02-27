@@ -131,15 +131,15 @@ var playerData ={
 		},
 		bullet:
 		{
-			fps:3,
-			cycle:false,
+			fps:4,
+			cycle:true,
 			//width:300,
 			frames:
 			[
-				{width:186, height:159, startX:3337, startY:1554},
-				{width:186, height:159, startX:0, startY:1924},
-				{width:186, height:159, startX:186, startY:1924},
-				{width:186, height:159, startX:372, startY:1924},
+				{width:186, height:155, startX:3186, startY:1554},
+				{width:186, height:155, startX:0, startY:1924},
+				{width:186, height:155, startX:186, startY:1924},
+				{width:186, height:155, startX:372, startY:1924},
 				
 				
 				
