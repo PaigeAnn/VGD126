@@ -97,12 +97,16 @@ for(let i=0; i<100; i++)
 //console.log(bullets)
 
 /*------------------^^BULLET STUFF^^----------------------*/
+	
 
 gameStates[`level1`] = function()
 {
+//	sounds.play(`bg`, 0, true);
 	if(!keys[`W`] && !keys[`S`] && !keys[`D`] && !keys[`A`] && !keys[` `] && canShoot && wiz.canJump)
 	{
-		wiz.changeState(`idle`)
+		wiz.changeState(`idle`);
+		
+		
 	}
 	
 	
@@ -142,7 +146,7 @@ gameStates[`level1`] = function()
 		wiz.canJump = false;
 		wiz.vy = wiz.jumpHeight;
 		wiz.changeState(`jump`)
-		//sounds.play(`splode`,1)
+		sounds.play(`jump`,1)
 	}
 	shotTimer--;
 	if(shotTimer <=0)
@@ -168,7 +172,7 @@ gameStates[`level1`] = function()
 			bullets[currentBullet].y = wiz.y + 20;
 			bullets[currentBullet].dir = wiz.dir;
 			
-			//sounds.play(`splode`,1)
+			sounds.play(`shoot`,1)
 
 			currentBullet++;
 			if(currentBullet>=bullets.length)
